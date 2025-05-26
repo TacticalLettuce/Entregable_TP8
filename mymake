@@ -1,0 +1,8 @@
+papa: main.o registro.o
+	gcc main.o registro.o -o papa -Wall
+main.o: main.c registro.h
+	gcc main.c -c -Wall
+registro.o: registro.c registro.h
+	gcc registro.c -c -Wall
+clean:
+	rm *.o
